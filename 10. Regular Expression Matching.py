@@ -10,7 +10,12 @@ By : shenqiti
 2019/7/29
 
 '''
-
+'''
+string s use index i and string p use index j
+dp[i][j] means the match status between p[:i] and s[:j]
+dp[0][0] means the match status of two empty strings, and dp[1][1] means the match status of p[0] and s[0].
+Therefore, when refering to the i-th and the j-th characters of p and s for updating dp[i][j], we use p[i - 1] and s[j - 1].
+'''
 
 class Solution:
     def isMatch(self, s, p):
@@ -29,7 +34,25 @@ class Solution:
                             p[j - 1] == '*' and ((p[j - 2] in [s[i - 1], '.'] and dp[i - 1][j]) or (dp[i][j - 2])))
         return dp[len(s)][len(p)]
 
+'''
+dp[i][j] = (p[j-1] in [s[i-1],'.']  and dp[i-1][j-1]) or (p[j-1] == '*' and ((p[j-2] in [s[i-1],'.'] and dp[i-1][j] ) or (dp[i][j-2]))) 
+Here's the explanation to this code sentence
 
+if p[j-1] in [s[i-1],'.']:
+	# first condition p[j-1] == s[i-1] or p[j-1] == '.' 
+	# egg. s='a' p ='.' or 'a'
+	dp[i][j] = dp[i-1][j-1]
+if p[j-1] == '*':
+	# second condition  p[j-1] == '*' , '*' means zero
+	# egg. s='b' p ='ba*'
+	dp[i][j] = dp[i][j-2]
+	if p[j-2] in [s[i-1],'.']:
+		# last condition  p[j-1] == '*', '*' means more of the preceding element
+		# egg. s='aa' p ='a*'
+		dp[i][j] = dp[i][j] or dp[i-1][j]
+
+
+'''
 
 dd = Solution()
 s = 'mississippi'
