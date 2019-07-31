@@ -1,5 +1,6 @@
 '''
 48. Rotate Image
+数组和动态数组系列：
 
 You are given an n x n 2D matrix representing an image.
 
