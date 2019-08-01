@@ -1,7 +1,7 @@
 '''
 448. Find All Numbers Disappeared in an Array
 
-
+数组和动态数组系列：
 Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 
 Find all the elements of [1, n] inclusive that do not appear in this array.
@@ -28,7 +28,7 @@ class Solution:
         Sets are very fast Python data structures. Whenever order isnt important you can use them to speed-up run-time.
         Firstly it creates a set of numbers from 1 to n and then difference method returns a list of missing numbers.
         '''
-        return set(range(1, len(nums) + 1)).difference(set(nums))
+        return set([i+1 for i in range(len(nums))]).difference(set(nums))
 
 
 dd = Solution()
