@@ -14,6 +14,7 @@ It is roughly divided into several topics:
     448. Find All Numbers Disappeared in an Array	
     66. Plus One
     238. Product of Array Except Self
+    697. Degree of an Array
 
 ————————————————————————————————————————————————————————————————————————————————————————————————
 # 2.递归：
