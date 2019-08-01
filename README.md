@@ -1,1 +1,1 @@
-# leedcode  url = https://leetcode.com/problemset/all/
+# leetcode  url = https://leetcode.com/problemset/all/
