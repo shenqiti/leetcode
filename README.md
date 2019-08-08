@@ -1,6 +1,7 @@
 # We use python version to deal with topics on leetcode
 
 # leetcode  url = https://leetcode.com/problemset/all/
+# lintcode  url = https://www.lintcode.com/problem/
 
 It is roughly divided into several topics:
 
@@ -32,7 +33,7 @@ It is roughly divided into several topics:
 ————————————————————————————————————————————————————————————————————————————————————————————————
 # 4.线段树 segment tree：
 ————————————————————————————————————————————————————————————————————————————————————————————————
-
+    Lint-201. Segment Tree Build
 
 
 
@@ -139,5 +140,11 @@ It is roughly divided into several topics:
 
 
 
+
+
+————————————————————————————————————————————————————————————————————————————————————————————————
+# 20.随便写写：
 ————————————————————————————————————————————————————————————————————————————————————————————————
 
+————————————————————————————————————————————————————————————————————————————————————————————————
+    Daffodil number
