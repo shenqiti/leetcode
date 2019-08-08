@@ -1,7 +1,7 @@
 # We use python version to deal with topics on leetcode
 
 # leetcode  url = https://leetcode.com/problemset/all/
-# lintcode  url = https://www.lintcode.com/problem/
+# linkcode  url = https://www.lintcode.com/problem/
 
 It is roughly divided into several topics:
 
