@@ -1,4 +1,4 @@
-# We use python version to deal with topics on leetcode
+# We use python to deal with topics on leetcode
 
 # leetcode  url = https://leetcode.com/problemset/all/
 # linkcode  url = https://www.lintcode.com/problem/
