@@ -38,7 +38,7 @@ By:shenqiti
 2019/8/12
 
 '''
-
+#Way 1
 
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -60,3 +60,36 @@ class Solution(object):
         lc=self.helper(root.left)
         rc=self.helper(root.right)
         return (max(lc)+max(rc), root.val+lc[0]+rc[0])
+
+
+
+
+#Way 2
+
+# class Solution(object):
+#     def rob(self, root):
+#         """
+#         :type root: TreeNode
+#         :rtype: int
+#         """
+
+#         def superrob(node):
+#             # returns tuple of size two (now, later)
+#             # now: max money earned if input node is robbed
+#             # later: max money earned if input node is not robbed
+
+#             # base case
+#             if not node: return (0, 0)
+
+#             # get values
+#             left, right = superrob(node.left), superrob(node.right)
+
+#             # rob now
+#             now = node.val + left[1] + right[1]
+
+#             # rob later
+#             later = max(left) + max(right)
+
+#             return (now, later)
+
+#         return max(superrob(root))
