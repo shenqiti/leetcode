@@ -44,19 +44,24 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-
-        def simple_rob(nums):
-            rob, not_rob = 0, 0
-            for num in nums:
-                rob, not_rob = not_rob + num, max(rob, not_rob)
-            return max(rob, not_rob)
-
-        if not nums:
+        if len(nums)==0:
             return 0
-        elif len(nums) == 1:
-            return nums[0]
-        else:
-            return max(simple_rob(nums[1:]), simple_rob(nums[:-1]))
+        if len(nums)<=3:
+            return max(nums)
+
+        NUMS1 = nums[0:len(nums)-1]
+        NUMS2 = nums[1:len(nums)]
+
+        NUMS1[1] = max(NUMS1[0],NUMS1[1])
+        for i in range(2,len(NUMS1)):
+            NUMS1[i] = max(NUMS1[i-1],NUMS1[i]+NUMS1[i-2])
+
+        NUMS2[1] = max(NUMS2[0], NUMS2[1])
+        for j in range(2, len(NUMS2)):
+            NUMS2[j] = max(NUMS2[j - 1], NUMS2[j] + NUMS2[j - 2])
+
+
+        return max(NUMS1[i],NUMS2[j])
 
 dd = Solution()
 nums = [1,2,3,4,5]
