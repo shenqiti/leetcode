@@ -1,6 +1,6 @@
 '''
-213. House Robber II
 
+213. House Robber II
 You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed.
 All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one.
 Meanwhile, adjacent houses have security system connected
@@ -22,10 +22,21 @@ Output: 4
 Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
              Total amount you can rob = 1 + 3 = 4.
 
+In House Robber, we can calculate the maximum loot using odd and even indices. Similarly, we can approach this. Only catch in this problem is that the first and last houses cannot be robbed together. Think of it like a circle. So, essentially, you cannot rob adjacent houses.
+
+So, we run two passes.
+First pass, start from the first house but ignore the last house. [0:len(nums)-1]
+Second pass, start from the second house till the last house. [1:len(nums)]
+In this way, we never loot the first and last houses together.
+
+Finally, just return the maximum of both.
+
+
 By:shenqiti
 2019/8/12
 
 '''
+
 
 class Solution(object):
     def rob(self, nums):
@@ -33,31 +44,21 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        # four nums: max value when
-        # first is robbed, last is robbed
-        # first is robbed, last is not robbed
-        # first is not robbed, last is robbed
-        # first is not robbed, last is not robbed
-        n = len(nums)
-        if n == 0:
+
+        def simple_rob(nums):
+            rob, not_rob = 0, 0
+            for num in nums:
+                rob, not_rob = not_rob + num, max(rob, not_rob)
+            return max(rob, not_rob)
+
+        if not nums:
             return 0
-        if n == 1:
+        elif len(nums) == 1:
             return nums[0]
-        if n == 2 or n ==3:
-            return max(nums)
-        ans = [nums[0]+nums[2],nums[0],nums[2],nums[1]]
-        for i in range(3,n):
-            temp = [0,0,0,0]
-            temp[0] = ans[1]+nums[i]
-            temp[1] = max(ans[0],ans[1])
-            temp[2] = ans[3]+nums[i]
-            temp[3] = max(ans[2],ans[3])
-            ans,temp = temp,ans
-        return max(ans[1:])
-
-
+        else:
+            return max(simple_rob(nums[1:]), simple_rob(nums[:-1]))
 
 dd = Solution()
-nums = [2,3,2]
+nums = [1,2,3,4,5]
 result = dd.rob(nums)
 print(result)
