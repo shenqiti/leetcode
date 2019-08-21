@@ -168,7 +168,9 @@ It is roughly divided into several topics:
     96. Unique Binary Search Trees (catalan number)
     714. Best Time to Buy and Sell Stock with Transaction Fee
     记忆化搜索:
-    139. Word Break  (待完成)
+    139. Word Break
+    140. Word Break II (待完成)
+    Lint-683. Word Break III (待完成)
     
     九章算法 动态规划：
     322. Coin Change 典型 (待完成)
