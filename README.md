@@ -86,7 +86,7 @@ It is roughly divided into several topics:
     387. First Unique Character in a String 这题要用过一遍的方法！非常重要！ 
     146. LRU Cache (待完成)
     Lint-685. First Unique Number in Data Stream (待完成)
-    349. Intersection of Two Arrays (待完成)
+    349. Intersection of Two Arrays
     350. Intersection of Two Arrays II (待完成)
     771. Jewels and Stones (待完成)
     217. Contains Duplicate(待完成)
