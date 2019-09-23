@@ -34,6 +34,21 @@ class Solution(object):
             if each in N2:
                 intersection.append(each)
         return intersection
+
+'''
+class Solution:
+    def intersection(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """  
+        set1 = set(nums1)
+        set2 = set(nums2)
+        return list(set2 & set1)
+
+
+'''
 dd = Solution()
 nums1 = [4,9,5]
 nums2 = [9,4,9,8,4]
