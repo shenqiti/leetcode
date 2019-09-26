@@ -31,7 +31,28 @@ By:shenqiti
 2019/9/26
 
 '''
+'''
+This problem keeps moving the most frequently used node to the head, and delete the node before tail node.
+The double linked list takes constant time O(1) to add and remove nodes from the head or tail, and the node can remove itself without other references.
+#add node in doubly linked list right after head.
+head  <====  (node)  ====>  head.next
+# node.prev = head           node.next = head.next
+head <------  node    ------>  head.next
+# head.next.prev = node
+head          node    <------  head.next
+# head.next  = node
+head ------ > node    <=====>  head.next
+# remove node in doubly linked list:
 
+previous node   ====  node  ====  next node
+prev = node.prev                   new = node.next
+prev ---------------------------------> new
+prev <--------------------------------- new
+
+
+Use the dictionary here is to count the frequency of a node. Use the information saved in the dictionary to determine which node to delete when the size of the Double linked list exceeds the capacity.
+
+'''
 
 class ListNode:
     def __init__(self, key, value):
