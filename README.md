@@ -88,7 +88,7 @@ It is roughly divided into several topics:
     Lint-685. First Unique Number in Data Stream (待完成)
     349. Intersection of Two Arrays
     350. Intersection of Two Arrays II 
-    771. Jewels and Stones (待完成)
+    771. Jewels and Stones 
     217. Contains Duplicate(待完成)
     219. Contains Duplicate II	(待完成)
     811. Subdomain Visit Count	(待完成)
@@ -241,3 +241,4 @@ It is roughly divided into several topics:
 ————————————————————————————————————————————————————————————————————————————————————————————————
         
         1. Daffodil number
+	2. Reversal matrix
