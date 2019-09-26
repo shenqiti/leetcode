@@ -89,7 +89,7 @@ It is roughly divided into several topics:
     349. Intersection of Two Arrays
     350. Intersection of Two Arrays II 
     771. Jewels and Stones 
-    217. Contains Duplicate(待完成)
+    217. Contains Duplicate
     219. Contains Duplicate II	(待完成)
     811. Subdomain Visit Count	(待完成)
     500. Keyboard Row	(待完成)
